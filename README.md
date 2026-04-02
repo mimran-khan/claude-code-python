@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/🐍-Claude_Code_Python-blue?style=for-the-badge&labelColor=1a1a2e" alt="Claude Code Python" width="400">
+<img src="https://img.shields.io/badge/🔓_LEAKED-Claude_Code-FF0000?style=for-the-badge&labelColor=000000" alt="Leaked" width="300">
 
 <br><br>
 
@@ -8,18 +8,34 @@
 
 ### A Complete Python Implementation of Anthropic's Agentic Coding Assistant
 
+##### *Reverse-engineered from leaked TypeScript source*
+
 <br>
+
+<a href="https://github.com/mimran-khan/claude-code-python/stargazers">
+  <img src="https://img.shields.io/github/stars/mimran-khan/claude-code-python?style=for-the-badge&logo=github&logoColor=white&label=Stars&color=yellow" alt="Stars">
+</a>
+<a href="https://github.com/mimran-khan/claude-code-python/network/members">
+  <img src="https://img.shields.io/github/forks/mimran-khan/claude-code-python?style=for-the-badge&logo=github&logoColor=white&label=Forks&color=blue" alt="Forks">
+</a>
+<a href="https://github.com/mimran-khan/claude-code-python/watchers">
+  <img src="https://img.shields.io/github/watchers/mimran-khan/claude-code-python?style=for-the-badge&logo=github&logoColor=white&label=Watchers&color=green" alt="Watchers">
+</a>
+
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=mimran-khan-claude-code-python&label=Profile%20Views&color=blueviolet&style=for-the-badge" alt="Profile Views">
+
+<br><br>
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Tests](https://img.shields.io/badge/Tests-925_passing-4CAF50?style=flat-square&logo=pytest&logoColor=white)](./tests/)
-[![Coverage](https://img.shields.io/badge/Coverage-34%25-yellow?style=flat-square)](./tests/)
-[![Code Style](https://img.shields.io/badge/Code_Style-Ruff-D7FF64?style=flat-square&logo=ruff&logoColor=black)](https://docs.astral.sh/ruff/)
-[![Type Checked](https://img.shields.io/badge/Type_Checked-mypy-blue?style=flat-square)](http://mypy-lang.org/)
+[![Lines](https://img.shields.io/badge/Lines-149k+-blue?style=flat-square)](./src/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 
 <br>
 
-[Why Python?](#-why-python) · [Installation](#-installation) · [Usage](#-usage) · [Architecture](#-architecture) · [Documentation](#-documentation)
+[Background](#-background) · [Disclaimer](#%EF%B8%8F-disclaimer) · [Installation](#-installation) · [Architecture](#-architecture) · [Documentation](#-documentation)
 
 </div>
 
@@ -29,11 +45,59 @@
 
 <br>
 
-## 🚀 The Migration
+## ⚠️ DISCLAIMER
 
-This repository contains a **complete, line-by-line Python port** of Claude Code—Anthropic's powerful agentic coding CLI. What started as a TypeScript/Node.js codebase has been systematically transformed into idiomatic, production-ready Python.
+> **📚 EDUCATIONAL & RESEARCH PURPOSES ONLY**
+>
+> This repository contains source code that was **accidentally leaked** by Anthropic through their npm package (version 2.1.88) on **March 31, 2026**. A source map file (`.map`) was inadvertently bundled into production, allowing complete reconstruction of the original TypeScript source.
+>
+> <br>
+>
+> | ❌ DO NOT | ✅ DO |
+> |:----------|:------|
+> | Use this code for commercial purposes | Use for learning and research |
+> | Create competing products based on this code | Study AI coding assistant architecture |
+> | Circumvent Anthropic's security measures | Understand agentic tool systems |
+> | Redistribute for profit | Contribute educational improvements |
+>
+> <br>
+>
+> **This code is proprietary and owned by Anthropic. All rights reserved by Anthropic.**
 
 <br>
+
+---
+
+<br>
+
+## 📖 Background
+
+### The Leak
+
+On March 31, 2026, Anthropic accidentally published their Claude Code npm package with source maps included. This exposed:
+
+- **512,000+ lines** of TypeScript source code
+- **1,900+ files** revealing the complete architecture
+- **40+ agent tools** and their implementations
+- **85+ slash commands** with internal logic
+- **44+ feature flags** including unreleased features
+
+### The Python Port
+
+This repository represents a **complete, line-by-line migration** of the leaked TypeScript codebase to Python. The goal is purely educational—to help developers understand:
+
+- How production agentic AI systems are built
+- Tool-use patterns and orchestration
+- Context management at scale
+- MCP (Model Context Protocol) implementation
+
+<br>
+
+---
+
+<br>
+
+## 🚀 The Migration
 
 <table>
 <tr>
@@ -74,7 +138,7 @@ This repository contains a **complete, line-by-line Python port** of Claude Code
 
 ## 🎯 Why Python?
 
-Claude Code is an exceptional piece of engineering, but it's locked to the Node.js ecosystem. This port unlocks it for:
+Claude Code is an exceptional piece of engineering, but the original is locked to Node.js. This port enables:
 
 <br>
 
@@ -86,7 +150,7 @@ Claude Code is an exceptional piece of engineering, but it's locked to the Node.
 <br><br>
 <b>Python Developers</b>
 <br>
-<sub>Native integration with your existing Python codebase</sub>
+<sub>Study in your native language</sub>
 <br><br>
 </td>
 <td align="center" width="25%">
@@ -95,25 +159,25 @@ Claude Code is an exceptional piece of engineering, but it's locked to the Node.
 <br><br>
 <b>Data Scientists</b>
 <br>
-<sub>Use in notebooks and ML pipelines</sub>
+<sub>Explore in notebooks</sub>
 <br><br>
 </td>
 <td align="center" width="25%">
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="48">
+🔬
 <br><br>
-<b>Backend Teams</b>
+<b>Researchers</b>
 <br>
-<sub>Embed in FastAPI, Django, Flask apps</sub>
+<sub>Analyze agent patterns</sub>
 <br><br>
 </td>
 <td align="center" width="25%">
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="48">
+🎓
 <br><br>
-<b>ML Engineers</b>
+<b>Students</b>
 <br>
-<sub>Direct integration with training workflows</sub>
+<sub>Learn from production code</sub>
 <br><br>
 </td>
 </tr>
@@ -127,12 +191,14 @@ Claude Code is an exceptional piece of engineering, but it's locked to the Node.
 
 ## 📦 Installation
 
+> **Note**: This is for educational study only. For actual use, please purchase Claude Code from Anthropic.
+
 ### Requirements
 
 - Python 3.11 or higher
-- An Anthropic API key
+- An Anthropic API key (for testing)
 
-### Quick Install
+### Setup
 
 ```bash
 # Clone the repository
@@ -146,7 +212,7 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 # Install the package
 pip install -e ".[dev]"
 
-# Set your API key
+# Set your API key (for testing)
 export ANTHROPIC_API_KEY="sk-ant-..."
 ```
 
@@ -348,7 +414,7 @@ ruff check . && ruff format --check . && mypy src && pytest
 
 ### Project Structure
 
-```bash
+```
 claude-code-python/
 ├── src/claude_code/     # Source code (1,805 modules)
 ├── tests/               # Test suite (89 files, 925 tests)
@@ -419,22 +485,15 @@ pytest
 
 <br>
 
-## 📄 License
+## 📜 Legal Notice
 
-This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
+This source code is **proprietary** and owned by **Anthropic**. 
 
-<br>
+This repository exists **strictly for educational and research purposes**. The maintainers do not encourage or condone any commercial use or redistribution of this code.
 
----
+**All rights reserved by Anthropic.**
 
-<br>
-
-## 🙏 Acknowledgments
-
-This is a community-driven Python port of Claude Code. It is **not** an official Anthropic product.
-
-- Thanks to Anthropic for creating Claude Code
-- Thanks to the Python community for the excellent tooling ecosystem
+If you are from Anthropic and wish to have this repository removed, please open an issue or contact the maintainers directly.
 
 <br>
 
@@ -444,10 +503,34 @@ This is a community-driven Python port of Claude Code. It is **not** an official
 
 <div align="center">
 
-**[Report Issue](https://github.com/mimran-khan/claude-code-python/issues) · [Request Feature](https://github.com/mimran-khan/claude-code-python/issues) · [Discussions](https://github.com/mimran-khan/claude-code-python/discussions)**
+## 📈 Repository Stats
 
 <br>
 
-Made with 🐍 for the Python community
+<img src="https://img.shields.io/github/repo-size/mimran-khan/claude-code-python?style=for-the-badge&logo=github&label=Repo%20Size&color=orange" alt="Repo Size">
+<img src="https://img.shields.io/github/last-commit/mimran-khan/claude-code-python?style=for-the-badge&logo=github&label=Last%20Commit&color=purple" alt="Last Commit">
+<img src="https://img.shields.io/github/commit-activity/m/mimran-khan/claude-code-python?style=for-the-badge&logo=github&label=Commits/Month&color=green" alt="Commit Activity">
+
+<br><br>
+
+<img src="https://img.shields.io/github/issues/mimran-khan/claude-code-python?style=flat-square&logo=github&label=Issues" alt="Issues">
+<img src="https://img.shields.io/github/issues-pr/mimran-khan/claude-code-python?style=flat-square&logo=github&label=Pull%20Requests" alt="PRs">
+<img src="https://img.shields.io/github/contributors/mimran-khan/claude-code-python?style=flat-square&logo=github&label=Contributors" alt="Contributors">
+
+<br><br>
+
+**[⭐ Star this repo](https://github.com/mimran-khan/claude-code-python) · [🍴 Fork](https://github.com/mimran-khan/claude-code-python/fork) · [🐛 Report Issue](https://github.com/mimran-khan/claude-code-python/issues) · [💬 Discussions](https://github.com/mimran-khan/claude-code-python/discussions)**
+
+<br>
+
+---
+
+<br>
+
+**📚 For Educational Purposes Only**
+
+<br>
+
+*Not affiliated with Anthropic*
 
 </div>
