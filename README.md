@@ -1,14 +1,20 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/🔓_LEAKED-Claude_Code-FF0000?style=for-the-badge&labelColor=000000" alt="Leaked" width="300">
+> **📦 Looking for the original TypeScript source?**
+> 
+> **[👉 Check out claude-code-source](https://github.com/mimran-khan/claude-code-source)** - The leaked TypeScript codebase (512k+ lines, 1,900+ files)
+
+<br>
+
+<img src="https://img.shields.io/badge/🐍_Python-Claude_Code-3776AB?style=for-the-badge&labelColor=1a1a2e" alt="Claude Code Python" width="350">
 
 <br><br>
 
 # Claude Code Python
 
-### A Complete Python Implementation of Anthropic's Agentic Coding Assistant
+### Complete Python Port of Anthropic's Agentic Coding Assistant
 
-##### *Reverse-engineered from leaked TypeScript source*
+##### *Migrated from the leaked TypeScript source*
 
 <br>
 
@@ -35,7 +41,7 @@
 
 <br>
 
-[Background](#-background) · [Disclaimer](#%EF%B8%8F-disclaimer) · [Installation](#-installation) · [Architecture](#-architecture) · [Documentation](#-documentation)
+[Why Python?](#-why-python) · [Installation](#-installation) · [Usage](#-usage) · [Architecture](#-architecture) · [Documentation](#-documentation)
 
 </div>
 
@@ -49,47 +55,15 @@
 
 > **📚 EDUCATIONAL & RESEARCH PURPOSES ONLY**
 >
-> This repository contains source code that was **accidentally leaked** by Anthropic through their npm package (version 2.1.88) on **March 31, 2026**. A source map file (`.map`) was inadvertently bundled into production, allowing complete reconstruction of the original TypeScript source.
->
-> <br>
+> This is a Python port of code that was **accidentally leaked** by Anthropic through their npm package on **March 31, 2026**.
 >
 > | ❌ DO NOT | ✅ DO |
 > |:----------|:------|
-> | Use this code for commercial purposes | Use for learning and research |
-> | Create competing products based on this code | Study AI coding assistant architecture |
-> | Circumvent Anthropic's security measures | Understand agentic tool systems |
-> | Redistribute for profit | Contribute educational improvements |
+> | Use for commercial purposes | Use for learning and research |
+> | Create competing products | Study AI coding assistant architecture |
+> | Redistribute for profit | Understand agentic tool systems |
 >
-> <br>
->
-> **This code is proprietary and owned by Anthropic. All rights reserved by Anthropic.**
-
-<br>
-
----
-
-<br>
-
-## 📖 Background
-
-### The Leak
-
-On March 31, 2026, Anthropic accidentally published their Claude Code npm package with source maps included. This exposed:
-
-- **512,000+ lines** of TypeScript source code
-- **1,900+ files** revealing the complete architecture
-- **40+ agent tools** and their implementations
-- **85+ slash commands** with internal logic
-- **44+ feature flags** including unreleased features
-
-### The Python Port
-
-This repository represents a **complete, line-by-line migration** of the leaked TypeScript codebase to Python. The goal is purely educational—to help developers understand:
-
-- How production agentic AI systems are built
-- Tool-use patterns and orchestration
-- Context management at scale
-- MCP (Model Context Protocol) implementation
+> **Original code is proprietary and owned by Anthropic.**
 
 <br>
 
@@ -98,6 +72,8 @@ This repository represents a **complete, line-by-line migration** of the leaked 
 <br>
 
 ## 🚀 The Migration
+
+This repository is a **complete, line-by-line Python port** of Claude Code's TypeScript backend.
 
 <table>
 <tr>
@@ -138,9 +114,7 @@ This repository represents a **complete, line-by-line migration** of the leaked 
 
 ## 🎯 Why Python?
 
-Claude Code is an exceptional piece of engineering, but the original is locked to Node.js. This port enables:
-
-<br>
+The original Claude Code is locked to Node.js. This Python port enables:
 
 <table>
 <tr>
@@ -150,7 +124,7 @@ Claude Code is an exceptional piece of engineering, but the original is locked t
 <br><br>
 <b>Python Developers</b>
 <br>
-<sub>Study in your native language</sub>
+<sub>Native integration with your codebase</sub>
 <br><br>
 </td>
 <td align="center" width="25%">
@@ -159,25 +133,25 @@ Claude Code is an exceptional piece of engineering, but the original is locked t
 <br><br>
 <b>Data Scientists</b>
 <br>
-<sub>Explore in notebooks</sub>
+<sub>Use in notebooks and ML pipelines</sub>
 <br><br>
 </td>
 <td align="center" width="25%">
 <br>
-🔬
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="48">
 <br><br>
-<b>Researchers</b>
+<b>Backend Teams</b>
 <br>
-<sub>Analyze agent patterns</sub>
+<sub>Embed in FastAPI, Django, Flask</sub>
 <br><br>
 </td>
 <td align="center" width="25%">
 <br>
-🎓
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="48">
 <br><br>
-<b>Students</b>
+<b>ML Engineers</b>
 <br>
-<sub>Learn from production code</sub>
+<sub>Integrate with training workflows</sub>
 <br><br>
 </td>
 </tr>
@@ -191,12 +165,10 @@ Claude Code is an exceptional piece of engineering, but the original is locked t
 
 ## 📦 Installation
 
-> **Note**: This is for educational study only. For actual use, please purchase Claude Code from Anthropic.
-
 ### Requirements
 
 - Python 3.11 or higher
-- An Anthropic API key (for testing)
+- An Anthropic API key
 
 ### Setup
 
@@ -212,7 +184,7 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 # Install the package
 pip install -e ".[dev]"
 
-# Set your API key (for testing)
+# Set your API key
 export ANTHROPIC_API_KEY="sk-ant-..."
 ```
 
@@ -257,14 +229,12 @@ import asyncio
 from claude_code.core.query_engine import QueryEngine, QueryEngineConfig
 
 async def main():
-    # Initialize the engine
     engine = QueryEngine(QueryEngineConfig(
         cwd="/path/to/your/project",
         tools=[],  # Tools are auto-loaded
         max_tokens=4096,
     ))
     
-    # Send a query
     response = await engine.query("What files are in this directory?")
     print(response)
 
@@ -412,18 +382,6 @@ mypy src
 ruff check . && ruff format --check . && mypy src && pytest
 ```
 
-### Project Structure
-
-```
-claude-code-python/
-├── src/claude_code/     # Source code (1,805 modules)
-├── tests/               # Test suite (89 files, 925 tests)
-├── docs/                # Documentation
-├── examples/            # Usage examples
-├── pyproject.toml       # Package configuration
-└── uv.lock              # Locked dependencies
-```
-
 <br>
 
 ---
@@ -485,15 +443,24 @@ pytest
 
 <br>
 
+## 🔗 Related
+
+- **[📦 Original TypeScript Source](https://github.com/mimran-khan/claude-code-source)** - The leaked codebase
+- **[🌐 Live Analysis](https://mimran-khan.github.io/claude-code-source/)** - Interactive website
+
+<br>
+
+---
+
+<br>
+
 ## 📜 Legal Notice
 
-This source code is **proprietary** and owned by **Anthropic**. 
+This source code is based on **proprietary code owned by Anthropic**. 
 
-This repository exists **strictly for educational and research purposes**. The maintainers do not encourage or condone any commercial use or redistribution of this code.
+This repository exists **strictly for educational and research purposes**.
 
 **All rights reserved by Anthropic.**
-
-If you are from Anthropic and wish to have this repository removed, please open an issue or contact the maintainers directly.
 
 <br>
 
@@ -513,13 +480,7 @@ If you are from Anthropic and wish to have this repository removed, please open 
 
 <br><br>
 
-<img src="https://img.shields.io/github/issues/mimran-khan/claude-code-python?style=flat-square&logo=github&label=Issues" alt="Issues">
-<img src="https://img.shields.io/github/issues-pr/mimran-khan/claude-code-python?style=flat-square&logo=github&label=Pull%20Requests" alt="PRs">
-<img src="https://img.shields.io/github/contributors/mimran-khan/claude-code-python?style=flat-square&logo=github&label=Contributors" alt="Contributors">
-
-<br><br>
-
-**[⭐ Star this repo](https://github.com/mimran-khan/claude-code-python) · [🍴 Fork](https://github.com/mimran-khan/claude-code-python/fork) · [🐛 Report Issue](https://github.com/mimran-khan/claude-code-python/issues) · [💬 Discussions](https://github.com/mimran-khan/claude-code-python/discussions)**
+**[⭐ Star](https://github.com/mimran-khan/claude-code-python) · [🍴 Fork](https://github.com/mimran-khan/claude-code-python/fork) · [🐛 Report Issue](https://github.com/mimran-khan/claude-code-python/issues) · [💬 Discussions](https://github.com/mimran-khan/claude-code-python/discussions)**
 
 <br>
 
